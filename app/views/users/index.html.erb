@@ -1,12 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h1>DevMatch Community</h1>
+      <p>Welcome to the DevMatch community. Users must have a profile in order to be visible in the community.</p>
       <ul class="list-unstyled">
         <% @users.each do |user| %>
           <% if user.profile %>
             <li>
               <div class="well row <%= cycle('white-bg', '') %>">
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4">
                   <% if user.profile.avatar %>
                     <%= link_to user do %>
                       <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
