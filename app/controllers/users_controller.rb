@@ -7,7 +7,7 @@ before_action :authenticate_user!
   end
   
   def index
-    
+    @users = User.includes(:profile)
   end
   
 end
